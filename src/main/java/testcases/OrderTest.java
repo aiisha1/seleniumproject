@@ -29,28 +29,25 @@ public class OrderTest extends TestBase {
 		order.clickAddtoCartBtn();
 		order.clickViewCartBtn();
 		order.clickProceedTocheckoutBtn();
+		
+		// Fill order form
 		order.clickFirstnameField();
-		order.typeInFirstnameField(browser);
+		order.typeInFirstnameField("firstName");
 		order.clickLastnameField();
-		order.typeInLastnameField(browser);
-		order.clickCountryField();
-		order.selectCountryName(browser);
+		order.typeInLastnameField("lastName");
 		order.clickStreetField();
-		order.typeInStreetField(browser);
+		order.typeInStreetField("street");
 		order.clickTownField();
-		order.typeInTownField(browser);
-		order.clickStateField();
-		order.selectStateName(browser);
+		order.typeInTownField("town");
 		order.clickPhonenumberField();
-		order.typeInPhonenumberField(browser);
+		order.typeInPhonenumberField("phoneNumber");
 		order.clickEmailaddressField();
-		order.typeInEmailaddressField(browser);
+		order.typeInEmailaddressField("emailaddress");
 		
 		// Proceed to checkout
-		order.clickPaymentBtn();
+		order.clickCashOnDeliveryButton();
+		Thread.sleep(10000);
 		order.clickPlaceorderBtn();
-		 
-		
 		
 	}
 }
